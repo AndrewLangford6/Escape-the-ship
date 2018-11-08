@@ -122,5 +122,23 @@
   <ItemGroup>
     <None Include="Resources\yellow_50x50.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Spear of Justice Remix-MAP3Music.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gameover.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Metroid_Door-Brandino480-995195341.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mario_Jumping-Mike_Koenig-989896458.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Labyrinth Fight Remix FINAL-MAP3Music.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Alien Death Ray-SoundBible.com-1203224011.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

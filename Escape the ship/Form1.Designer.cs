@@ -34,8 +34,6 @@
             this.redLabel = new System.Windows.Forms.Label();
             this.greenlabel = new System.Windows.Forms.Label();
             this.yellowlabel = new System.Windows.Forms.Label();
-            this.helpButton = new System.Windows.Forms.Button();
-            this.controlsImage = new System.Windows.Forms.Label();
             this.yellowButtonLabel = new System.Windows.Forms.Label();
             this.greenButtonLabel = new System.Windows.Forms.Label();
             this.redButtonLabel = new System.Windows.Forms.Label();
@@ -91,26 +89,6 @@
             this.yellowlabel.TabIndex = 8;
             this.yellowlabel.Text = "yellowLabel";
             // 
-            // helpButton
-            // 
-            this.helpButton.Location = new System.Drawing.Point(764, 269);
-            this.helpButton.Name = "helpButton";
-            this.helpButton.Size = new System.Drawing.Size(75, 23);
-            this.helpButton.TabIndex = 9;
-            this.helpButton.Text = "Help";
-            this.helpButton.UseVisualStyleBackColor = true;
-            this.helpButton.Click += new System.EventHandler(this.helpButton_Click);
-            // 
-            // controlsImage
-            // 
-            this.controlsImage.Image = ((System.Drawing.Image)(resources.GetObject("controlsImage.Image")));
-            this.controlsImage.Location = new System.Drawing.Point(196, -12);
-            this.controlsImage.Name = "controlsImage";
-            this.controlsImage.Size = new System.Drawing.Size(426, 331);
-            this.controlsImage.TabIndex = 10;
-            this.controlsImage.Text = "label1";
-            this.controlsImage.Visible = false;
-            // 
             // yellowButtonLabel
             // 
             this.yellowButtonLabel.ForeColor = System.Drawing.Color.Black;
@@ -161,8 +139,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(851, 304);
-            this.Controls.Add(this.controlsImage);
-            this.Controls.Add(this.helpButton);
             this.Controls.Add(this.yellowlabel);
             this.Controls.Add(this.greenlabel);
             this.Controls.Add(this.yellowButtonLabel);
@@ -192,8 +168,6 @@
         private System.Windows.Forms.Label yellowButtonLabel;
         private System.Windows.Forms.Label greenlabel;
         private System.Windows.Forms.Label yellowlabel;
-        private System.Windows.Forms.Button helpButton;
-        private System.Windows.Forms.Label controlsImage;
     }
 }
 

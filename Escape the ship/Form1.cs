@@ -1,4 +1,4 @@
-﻿/// created by : 
+﻿/// created by : Andrew
 /// date       : 
 /// description: A basic text adventure game engine
 
@@ -11,24 +11,36 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
 
 namespace Escape_the_ship
 {
+
     public partial class Form1 : Form
     {
         // tracks what part of the game the user is at
         int scene = 0;
         bool item = false;
         bool p = false;
-        bool helpClick = false;
+        bool win;
+        SoundPlayer nextScene = new SoundPlayer(Properties.Resources.transition);
+       // SoundPlayer start = new SoundPlayer(Properties.Resources.);
+
+
+
 
 
 
         // random number generator
 
         public Form1()
+
         {
+          //  start.PlaySync();
             InitializeComponent();
+
+
+
 
             //display initial message and options
             outputLabel.Text = "You wake up tied to examination table in a strange room. \nDo you try to break free?";
@@ -42,10 +54,15 @@ namespace Escape_the_ship
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
+
             /// check to see what button has been pressed and advance
             /// to the next appropriate scene
             if (e.KeyCode == Keys.M)       //red button press
             {
+                if (scene <= 25)
+                {
+                    nextScene.Play();
+                }
                 if (scene == 0)
                 {
                     Random randGen = new Random();
@@ -125,6 +142,10 @@ namespace Escape_the_ship
                 {
                     scene = 17;
                 }
+                else if (scene == 14)
+                {
+                    scene = 13;
+                }
                 else if (scene == 26)
                 {
                     scene = 0;
@@ -147,10 +168,6 @@ namespace Escape_the_ship
                 {
                     scene = 23;
                 }
-                else if (scene == 20)
-                {
-                    scene = 26;
-                }
                 else if (scene == 21)
                 {
                     scene = 13;
@@ -169,13 +186,22 @@ namespace Escape_the_ship
                     scene = 13;
                 }
 
-                else if (scene == 2 || scene == 3 || scene == 5 || scene == 9 || scene == 10 || scene == 18 || scene == 19 || scene == 20 || scene == 27)
+                else if (scene == 2 || scene == 3 || scene == 5 || scene == 9 || scene == 10 || scene == 15 || scene == 18 || scene == 19 || scene == 27)
                 {
                     scene = 26;
+                }
+                else if (scene == 20)
+                {
+                    scene = 26;
+                    win = true;
                 }
             }
             else if (e.KeyCode == Keys.B)  //blue button press
             {
+                if (scene <= 25)
+                {
+                    nextScene.Play();
+                }
                 if (scene == 0)
                 {
                     scene = 1;
@@ -223,10 +249,14 @@ namespace Escape_the_ship
                 {
                     this.Close();
                 }
-    `
+
             }
             else if (e.KeyCode == Keys.Space) //green button press 
             {
+                if (scene <= 25)
+                {
+                    nextScene.Play();
+                }
                 if (scene == 13)
                 {
                     if (p == true)
@@ -270,12 +300,15 @@ namespace Escape_the_ship
 
             else if (e.KeyCode == Keys.N) //yellow button press 
             {
+                if (scene <= 25)
+                {
+                    nextScene.Play();
+                }
                 if (scene == 13)
                 {
                     scene = 22;
                 }
             }
-
             /// Display text and game options to screen based on the current scene
             switch (scene)
             {
@@ -291,7 +324,10 @@ namespace Escape_the_ship
                     redLabel.Visible = true;
                     blueButtonLabel.Visible = true;
                     blueLabel.Visible = true;
-
+                    item = false;
+                    p = false;
+                    win = false;
+                   // start.Play();
                     break;
                 case 1:
                     outputLabel.Text = "Are you sure you want to wait?";
@@ -305,6 +341,7 @@ namespace Escape_the_ship
                     redLabel.Visible = true;
                     blueButtonLabel.Visible = true;
                     blueLabel.Visible = true;
+
                     break;
                 case 2:
                     outputLabel.Text = "By the time you decide to change your mind, an Alien walks into the room, notices your awake and probes you. Game over.";
@@ -645,27 +682,6 @@ namespace Escape_the_ship
                 default:
                     break;
             }
-        }
-
-        private void helpButton_Click(object sender, EventArgs e)
-        {
-            Graphics g = this.CreateGraphics();
-            SolidBrush drawBrush = new SolidBrush(Color.Black);
-            g.FillRectangle(drawBrush, 0, 0, this.Width, this.Height);
-            Font drawFont = new Font("Arial", 16, FontStyle.Bold);
-
-            g.DrawString("Controls", drawFont, drawBrush, this.Width/2, 50);
-
-
-            greenlabel.Visible = false;
-            yellowlabel.Visible = false;
-            greenButtonLabel.Visible = false;
-            yellowButtonLabel.Visible = false;
-            redButtonLabel.Visible = false;
-            redLabel.Visible = false;
-            blueButtonLabel.Visible = false;
-            blueLabel.Visible = false;
-            helpClick = false;
         }
     }
 }
