@@ -140,5 +140,14 @@
   <ItemGroup>
     <None Include="Resources\Alien Death Ray-SoundBible.com-1203224011.wav" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Boxing Bell Start Round-SoundBible.com-1691615580.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Robot_blip-Marianne_Gagnon-120342607.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Strange Beeping-SoundBible.com-2088039238.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

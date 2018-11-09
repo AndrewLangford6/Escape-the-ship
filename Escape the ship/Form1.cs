@@ -20,28 +20,20 @@ namespace Escape_the_ship
     {
         // tracks what part of the game the user is at
         int scene = 0;
+        // special items to collect;
         bool item = false;
         bool p = false;
         bool win;
-        SoundPlayer nextScene = new SoundPlayer(Properties.Resources.transition);
-       // SoundPlayer start = new SoundPlayer(Properties.Resources.);
 
-
-
-
-
-
-        // random number generator
+        SoundPlayer nextScene = new SoundPlayer(Properties.Resources.blip);
+        SoundPlayer itemPlayer = new SoundPlayer(Properties.Resources.itemSound);
+        SoundPlayer start = new SoundPlayer(Properties.Resources.Boxing_Bell_Start_Round_SoundBible_com_1691615580);
 
         public Form1()
-
         {
-          //  start.PlaySync();
+            start.PlaySync();
+
             InitializeComponent();
-
-
-
-
             //display initial message and options
             outputLabel.Text = "You wake up tied to examination table in a strange room. \nDo you try to break free?";
             redLabel.Text = "Yes";
@@ -306,6 +298,7 @@ namespace Escape_the_ship
                 }
                 if (scene == 13)
                 {
+                    itemPlayer.Play();
                     scene = 22;
                 }
             }
@@ -327,7 +320,7 @@ namespace Escape_the_ship
                     item = false;
                     p = false;
                     win = false;
-                   // start.Play();
+                    start.Play();
                     break;
                 case 1:
                     outputLabel.Text = "Are you sure you want to wait?";
@@ -683,13 +676,19 @@ namespace Escape_the_ship
                     break;
             }
         }
+        // view controls for using a keyboard
+        private void controlsOpenLabel_Click(object sender, EventArgs e)
+        {
+            controlsCloseLabel.Visible = true;
+            controlsOpenLabel.Visible = false;
+            controlsImage.Visible = true;
+        }
+
+        private void controlsCloseLabel_Click(object sender, EventArgs e)
+        {
+            controlsCloseLabel.Visible = false;
+            controlsOpenLabel.Visible = true;
+            controlsImage.Visible = false;
+        }
     }
 }
-
-/*
- *                 case :
-                    outputLabel.Text = "";
-                    redLabel.Text = "";
-                    blueLabel.Text = "";
-                    break;
-*/

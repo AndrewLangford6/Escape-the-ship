@@ -110,6 +110,15 @@ namespace Escape_the_ship.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream blip {
+            get {
+                return ResourceManager.GetStream("blip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap blue {
@@ -162,6 +171,15 @@ namespace Escape_the_ship.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Boxing_Bell_Start_Round_SoundBible_com_1691615580 {
+            get {
+                return ResourceManager.GetStream("Boxing_Bell_Start_Round_SoundBible_com_1691615580", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
         internal static System.IO.UnmanagedMemoryStream door {
             get {
                 return ResourceManager.GetStream("door", resourceCulture);
@@ -193,6 +211,15 @@ namespace Escape_the_ship.Properties {
             get {
                 object obj = ResourceManager.GetObject("green_50x50", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream itemSound {
+            get {
+                return ResourceManager.GetStream("itemSound", resourceCulture);
             }
         }
         

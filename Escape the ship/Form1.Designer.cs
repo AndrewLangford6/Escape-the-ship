@@ -38,6 +38,9 @@
             this.greenButtonLabel = new System.Windows.Forms.Label();
             this.redButtonLabel = new System.Windows.Forms.Label();
             this.blueButtonLabel = new System.Windows.Forms.Label();
+            this.controlsImage = new System.Windows.Forms.Label();
+            this.controlsOpenLabel = new System.Windows.Forms.Label();
+            this.controlsCloseLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // outputLabel
@@ -97,7 +100,6 @@
             this.yellowButtonLabel.Name = "yellowButtonLabel";
             this.yellowButtonLabel.Size = new System.Drawing.Size(50, 52);
             this.yellowButtonLabel.TabIndex = 6;
-            this.yellowButtonLabel.Text = "N";
             this.yellowButtonLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // greenButtonLabel
@@ -108,7 +110,6 @@
             this.greenButtonLabel.Name = "greenButtonLabel";
             this.greenButtonLabel.Size = new System.Drawing.Size(50, 56);
             this.greenButtonLabel.TabIndex = 5;
-            this.greenButtonLabel.Text = "Space\r\nBar";
             this.greenButtonLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // redButtonLabel
@@ -119,7 +120,6 @@
             this.redButtonLabel.Name = "redButtonLabel";
             this.redButtonLabel.Size = new System.Drawing.Size(54, 50);
             this.redButtonLabel.TabIndex = 4;
-            this.redButtonLabel.Text = "M";
             this.redButtonLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // blueButtonLabel
@@ -130,8 +130,40 @@
             this.blueButtonLabel.Name = "blueButtonLabel";
             this.blueButtonLabel.Size = new System.Drawing.Size(54, 51);
             this.blueButtonLabel.TabIndex = 3;
-            this.blueButtonLabel.Text = "B";
             this.blueButtonLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // controlsImage
+            // 
+            this.controlsImage.Image = ((System.Drawing.Image)(resources.GetObject("controlsImage.Image")));
+            this.controlsImage.Location = new System.Drawing.Point(415, 45);
+            this.controlsImage.Name = "controlsImage";
+            this.controlsImage.Size = new System.Drawing.Size(276, 267);
+            this.controlsImage.TabIndex = 11;
+            this.controlsImage.Visible = false;
+            // 
+            // controlsOpenLabel
+            // 
+            this.controlsOpenLabel.AutoSize = true;
+            this.controlsOpenLabel.ForeColor = System.Drawing.Color.White;
+            this.controlsOpenLabel.Location = new System.Drawing.Point(5, 286);
+            this.controlsOpenLabel.Name = "controlsOpenLabel";
+            this.controlsOpenLabel.Size = new System.Drawing.Size(45, 13);
+            this.controlsOpenLabel.TabIndex = 12;
+            this.controlsOpenLabel.Text = "Controls";
+            this.controlsOpenLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.controlsOpenLabel.Click += new System.EventHandler(this.controlsOpenLabel_Click);
+            // 
+            // controlsCloseLabel
+            // 
+            this.controlsCloseLabel.ForeColor = System.Drawing.Color.White;
+            this.controlsCloseLabel.Location = new System.Drawing.Point(5, 286);
+            this.controlsCloseLabel.Name = "controlsCloseLabel";
+            this.controlsCloseLabel.Size = new System.Drawing.Size(57, 13);
+            this.controlsCloseLabel.TabIndex = 13;
+            this.controlsCloseLabel.Text = "Close";
+            this.controlsCloseLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.controlsCloseLabel.Visible = false;
+            this.controlsCloseLabel.Click += new System.EventHandler(this.controlsCloseLabel_Click);
             // 
             // Form1
             // 
@@ -139,6 +171,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(851, 304);
+            this.Controls.Add(this.controlsCloseLabel);
+            this.Controls.Add(this.controlsOpenLabel);
+            this.Controls.Add(this.controlsImage);
             this.Controls.Add(this.yellowlabel);
             this.Controls.Add(this.greenlabel);
             this.Controls.Add(this.yellowButtonLabel);
@@ -168,6 +203,9 @@
         private System.Windows.Forms.Label yellowButtonLabel;
         private System.Windows.Forms.Label greenlabel;
         private System.Windows.Forms.Label yellowlabel;
+        private System.Windows.Forms.Label controlsImage;
+        private System.Windows.Forms.Label controlsOpenLabel;
+        private System.Windows.Forms.Label controlsCloseLabel;
     }
 }
 
