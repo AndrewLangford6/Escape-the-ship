@@ -1,5 +1,5 @@
-﻿/// created by : Andrew
-/// date       : 
+﻿/// created by : Andrew Langford
+/// date       : November 8th, 2018
 /// description: A basic text adventure game engine
 
 using System;
