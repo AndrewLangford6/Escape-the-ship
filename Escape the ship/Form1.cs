@@ -35,7 +35,7 @@ namespace Escape_the_ship
 
             InitializeComponent();
             //display initial message and options
-            outputLabel.Text = "You wake up tied to examination table in a strange room. \nDo you try to break free?";
+            outputLabel.Text = "You wake up tied to examination table in a strange room. Do you try to break free?";
             redLabel.Text = "Yes";
             blueLabel.Text = "No";
             greenlabel.Visible = false;
